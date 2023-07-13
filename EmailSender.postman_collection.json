@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "04fc59b8-a979-4c96-a02c-74f50b6f3083",
+		"name": "Email Sender",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23835707"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/events/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "even22",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Participant",
+			"item": [
+				{
+					"name": "Get Participants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/participants",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"participants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Participant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/participants/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"participants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Participant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"event_id\" : 1,\r\n    \"email\" : \"test@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/participants",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"participants"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email Scheduler",
+			"item": [
+				{
+					"name": "Get Email Schedulers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/email_schedulers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"email_schedulers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email Scheduler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/email_schedulers/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"email_schedulers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Email Scheduler",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"event_id\" : 1,\r\n    \"email_subject\" : \"Hallo 😀\",\r\n    \"email_content\" : \"𐌼𐌰𐌲 𐌲𐌻𐌴𐍃 𐌹̈𐍄𐌰𐌽, 𐌽𐌹 𐌼𐌹𐍃 𐍅𐌿 𐌽𐌳𐌰𐌽 𐌱𐍂𐌹𐌲𐌲𐌹𐌸 😀\",\r\n    \"timestamp\" : \"2020-01-01 11:50:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/email_schedulers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"email_schedulers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "save_emails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"event_id\" : 1,\r\n    \"email_subject\" : \"test@gmail.com\",\r\n    \"email_content\" : \"hello world\",\r\n    \"timestamp\" : \"2020-01-01 11:50:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/save_emails",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"save_emails"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
