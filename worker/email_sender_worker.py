@@ -1,4 +1,4 @@
-from lib.EmailSender import EmailSender
+from libraries.EmailSender import EmailSender
 from flask import Flask, request
 from models.EmailSchedulerModel import EmailScheduler
 from models.ParticipantModel import Participant
