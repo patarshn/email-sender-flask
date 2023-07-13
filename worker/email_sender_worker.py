@@ -15,7 +15,6 @@ def email_sender_worker():
             EmailScheduler.timestamp <= current_time_end,
             EmailScheduler.is_sending.is_not(True)
         ).all()
-        print(emails)
         
         email_sender = EmailSender()
         for email in emails:
@@ -30,12 +29,12 @@ def email_sender_worker():
             for participant in participants:
                 list_participant.append(participant.email)
             recipient_email = ','.join(list_participant)
-            print(recipient_email)
-            res = email_sender.send_email(recipient_email, email_subject, email_message)
-            res=True
-            if(res):
-                email.is_sending = True
-                db.session.commit()
+            if(len(list_participant > 1))
+                res = email_sender.send_email(recipient_email, email_subject, email_message)
+                res=True
+                if(res):
+                    email.is_sending = True
+                    db.session.commit()
 
         print("Email sending")
 
