@@ -1,7 +1,8 @@
 [](https://flask-migrate.readthedocs.io/en/latest/)
 
 # API Flask Email Sender Example
-example api for auto sending email from data timestamp
+example api for auto sending email from data timestamp, schedule will run every 1 minute  
+you can see the scheduler function in worker/email_sender_worker.py and scheduler in app.py
 
 ## Installation  
 `create .env from .env.example`  
