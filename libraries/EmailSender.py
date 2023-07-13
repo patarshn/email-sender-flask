@@ -20,7 +20,6 @@ class EmailSender:
         try:
             with smtplib.SMTP(self.smtp_host, self.smtp_port) as server:
                 server.starttls()
-                print(self.smtp_password)
                 server.login(self.smtp_username, self.smtp_password)
                 server.send_message(msg)
             print('Email sent successfully')
