@@ -14,6 +14,10 @@ pipenv install
 ```
 run this command for install pipenv and using virtual environment
 
+```
+flask db upgrade
+```
+run this command for migration the database
 
 ## Run code
 ```
